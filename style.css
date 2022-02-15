@@ -1,14 +1,26 @@
 .liStyle{
-    margin-bottom: 20px;
-    font-size: 40px;
+    /* margin-bottom: 20px;
+    font-size: 40px; */
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    margin: 4px;
 }
 
-.liStyle li{
+.bold{
+    font-weight: bold;
+}
+
+.large-font{
+    font-size: large;
+}
+
+/* .liStyle li{
     margin-bottom: 20px;
     margin-top: 20px;
-}
+} */
 
 
-.liStyle ul{
+/* .liStyle ul{
     font-size: 20px;
-}
+} */

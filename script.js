@@ -83,17 +83,31 @@
         for (const book of books) {
             var li = document.createElement('li');
             li.className = "liStyle";
-            let ul2 = document.createElement("ul")
-            let li2 = document.createElement("li");
-            let li3 = document.createElement("li");
-            li.appendChild(document.createTextNode(book.titolo));
-            li2.appendChild(document.createTextNode("GENERE: " + book.genere));
-            li3.appendChild(document.createTextNode("ANNO: " + book.anno));
-        
+            // let ul2 = document.createElement("ul")
+            // let li2 = document.createElement("li");
+            // let li3 = document.createElement("li");
+            // li.appendChild(document.createTextNode(book.titolo));
+            // li2.appendChild(document.createTextNode("GENERE: " + book.genere));
+            // li3.appendChild(document.createTextNode("ANNO: " + book.anno));
+            addHtml(li, book.titolo, true, 'bold large-font');
+            addHtml(li, book.genere, true, "large-font");
+            addHtml(li, book.anno);
             par.appendChild(li);
-            li.appendChild(ul2);
-            ul2.appendChild(li2);
-            ul2.appendChild(li3);
+            // li.appendChild(ul2);
+            // ul2.appendChild(li2);
+            // ul2.appendChild(li3);
+        }
+    }
+
+    function addHtml(htmlElement, text, isNewLine = false, className) {
+        const span = document.createElement('span');
+        span.className += className + " ";
+        const textNode = document.createTextNode(text);
+        span.appendChild(textNode)
+        htmlElement.appendChild(span);
+        if (isNewLine) {
+            const newLine = document.createElement('br');
+            htmlElement.appendChild(newLine);
         }
     }
 
